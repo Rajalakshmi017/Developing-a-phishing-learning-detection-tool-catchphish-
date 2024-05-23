@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body
+	{
+		background-image:url({{url_for('static',filename='img/5.png')}})
+	}
+	</style>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			<center> <h2 style="color:red;font-size:20;text-align: center;"> Web Application </h2></center>
+		</div>
+		<center><h2 style="color:white;font-size:20;text-align: center;">An Implementation of Fraudulent URL Detection with Advanced Feature and ML Technique</h2></center>
+		
+	</div>
+	</header>
+	<p style="color:red;font-size:20;text-align: center;"><b>Prediction</b></p>
+	<div class="results">
+
+
+	<center>
+	{% if prediction == 0%}
+	<h2 style="color:white;">URL is FRAUD </h2>
+	{% elif prediction == 1%}
+	<h2 style="color:white;">GENUINE URL(GOOD)</h2>
+	{% endif %}
+	</center>
+
+	</div>	
+</body>
+</html>

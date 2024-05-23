@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body
+	{
+		background-image:url({{url_for('static',filename='img/10.jpg')}})
+	}
+	</style>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname"> <center style="color:white;font-size:20;text-align: center;"><h2>
+			An Implementation of Fraudulent URL Detection with Advanced Feature and ML Technique</h2></center>
+		</div>
+		<center><h4>Phishing is when attackers attempt to trick users into doing 'the wrong thing', such as clicking a bad link that will download malware, or direct them to a dodgy website.</h4></center>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<center><h1 style="color:white;font-size:20;text-align: center;">Enter the URL</h1>
+		<textarea name="message" rows="8" cols="50"></textarea></center>
+		<br/>
+
+		<center><input type="submit" class="btn-info" value="PREDICT"></center>
+		
+	</form>
+		
+	</div>
+
+</body>
+</html>
